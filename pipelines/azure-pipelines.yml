@@ -1,0 +1,39 @@
+trigger: none
+pr: none
+
+parameters:
+  - name: environment
+    type: string
+    default: test
+    values:
+      - test
+      - prod
+
+  - name: workspace
+    type: string
+    default: orchestration
+    values:
+      - all
+      - orchestration
+      - reporting
+      - model
+      - writeback
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.11'
+      architecture: 'x64'
+    displayName: 'Use Python 3.11'
+
+  - script: python -m pip install -r $(Build.SourcesDirectory)/fabric_deployment/requirements.txt
+    displayName: 'Install Python dependencies'
+
+  - script: |
+      echo "Deploying for ${{ parameters.environment }} ${{ parameters.workspace }}"
+      python "$(Build.SourcesDirectory)/fabric_deployment/scripts/deploy.py" ${{ parameters.environment }} ${{ parameters.workspace }}
+    displayName: 'Dynamic Deploy'
+    env:
+      AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
+      AZURE_TENANT_ID: $(AZURE_TENANT_ID)
+      AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
