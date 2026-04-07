@@ -1,0 +1,28 @@
+{
+  "workspace_id": "WORKSPACE_ID_TEST",
+  "environment": "TEST_MODEL",
+  "repository_root": "fabric_workspaces/MODEL",
+  "item_type_in_scope": ["UserDataFunction", "SemanticModel"],
+  "item_name_filter": {
+    "SQLDatabase": ["Sample_SQLDB"],
+    "UserDataFunction": ["Sample_UserFunction"],
+    "SemanticModel": [
+      "Sample_SemanticModel_DirectLake",
+      "Sample_SemanticModel_DirectQuery"
+    ]
+  },
+  "db_mapping": {
+    "DEV": {
+      "workspace_id": "WORKSPACE_ID_DEV",
+      "database_id": "DATABASE_ID_DEV"
+    },
+    "TEST": {
+      "workspace_id": "WORKSPACE_ID_TEST",
+      "database_id": "DATABASE_ID_TEST"
+    },
+    "PROD": {
+      "workspace_id": "WORKSPACE_ID_PROD",
+      "database_id": "DATABASE_ID_PROD"
+    }
+  }
+}
