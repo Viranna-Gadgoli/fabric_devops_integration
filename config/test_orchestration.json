@@ -1,0 +1,52 @@
+{
+  "workspace_id": "WORKSPACE_ID_TEST",
+  "environment": "TEST_ORCHESTRATION",
+  "repository_root": "fabric_workspaces/ORCHESTRATION",
+  "item_type_in_scope": ["Lakehouse", "Environment", "Notebook", "DataPipeline"],
+  "item_name_filter": {
+    "Lakehouse": [],
+    "Notebook": ["Sample_Notebook"],
+    "DataPipeline": ["Sample_Pipeline"],
+    "Environment": [],
+    "Dataflow_Gen2": []
+  },
+  "lakehouse_id_map": {
+    "DEV": {
+      "LAKEHOUSE_ID_DEV_LANDING": "Landing",
+      "LAKEHOUSE_ID_DEV_BRONZE": "Bronze",
+      "LAKEHOUSE_ID_DEV_SILVER": "Silver",
+      "LAKEHOUSE_ID_DEV_GOLD": "Gold"
+    },
+    "TEST": {
+      "LAKEHOUSE_ID_TEST_LANDING": "Landing",
+      "LAKEHOUSE_ID_TEST_BRONZE": "Bronze",
+      "LAKEHOUSE_ID_TEST_SILVER": "Silver",
+      "LAKEHOUSE_ID_TEST_GOLD": "Gold"
+    },
+    "PROD": {
+      "LAKEHOUSE_ID_PROD_LANDING": "Landing",
+      "LAKEHOUSE_ID_PROD_BRONZE": "Bronze",
+	  "LAKEHOUSE_ID_TEST_SILVER": "Silver",
+      "LAKEHOUSE_ID_TEST_GOLD": "Gold"
+    }
+  },
+  "db_mapping": {
+    "DEV": {
+      "server_name": "DEV_SERVER_NAME",
+      "database_name": "DEV_DATABASE_NAME"
+    },
+    "TEST": {
+      "server_name": "TEST_SERVER_NAME",
+      "database_name": "TEST_DATABASE_NAME"
+    },
+    "PROD": {
+      "server_name": "PROD_SERVER_NAME",
+      "database_name": "PROD_DATABASE_NAME"
+    }
+  },
+  "spark_environment_map": {
+    "DEV": "SPARK_ENV_ID_DEV",
+    "TEST": "SPARK_ENV_ID_TEST",
+    "PROD": "SPARK_ENV_ID_PROD"
+  }
+}
