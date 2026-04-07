@@ -1,0 +1,23 @@
+{
+  "workspace_id": "WORKSPACE_ID_TEST",
+  "environment": "TEST_REPORTING",
+  "repository_root": "fabric_workspaces/REPORTING",
+  "item_type_in_scope": ["Report"],
+  "item_name_filter": {
+    "Report": ["Sample_Reporting_Report"]
+  },
+  "report_mapping": {
+    "DEV": {
+      "connection_name": "DEV-SR-MODEL",
+      "semantic_model_id": "SEMANTIC_MODEL_ID_DEV"
+    },
+    "TEST": {
+      "connection_name": "TEST-SR-MODEL",
+      "semantic_model_id": "SEMANTIC_MODEL_ID_TEST"
+    },
+    "PROD": {
+      "connection_name": "PROD-SR-MODEL",
+      "semantic_model_id": "SEMANTIC_MODEL_ID_PROD"
+    }
+  }
+}
