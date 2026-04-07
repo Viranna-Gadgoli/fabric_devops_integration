@@ -1,0 +1,23 @@
+{
+  "workspace_id": "WORKSPACE_ID_TEST",
+  "environment": "TEST_WRITEBACK",
+  "repository_root": "fabric_workspaces/WRITEBACK",
+  "item_type_in_scope": ["Report"],
+  "item_name_filter": {
+    "Report": ["Sample_Writeback_Report"]
+  },
+  "report_mapping": {
+    "DEV": {
+      "connection_name": "WORKSPACE_ID_DEV",
+      "semantic_model_id": "SEMANTIC_MODEL_ID_DEV"
+    },
+    "TEST": {
+      "connection_name": "TEST-SR-MODEL",
+      "semantic_model_id": "SEMANTIC_MODEL_ID_TEST"
+    },
+    "PROD": {
+      "connection_name": "PROD-SR-MODEL",
+      "semantic_model_id": "SEMANTIC_MODEL_ID_PROD"
+    }
+  }
+}
