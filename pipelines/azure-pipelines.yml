@@ -26,7 +26,7 @@ steps:
       architecture: 'x64'
     displayName: 'Use Python 3.11'
 
-  - script: python -m pip install -r $(Build.SourcesDirectory)/fabric_deployment/requirements.txt
+  - script: python -m pip install -r $(Build.SourcesDirectory)/fabric_devops_integration/requirements.txt
     displayName: 'Install Python dependencies'
 
   - script: |
